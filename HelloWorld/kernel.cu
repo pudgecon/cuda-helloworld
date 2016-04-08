@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <windows.h>
 
-#define ALAPH 1 // 0.8
+#define ALPHA 1 // 0.8
 #define BETA  1 // 0.2
 
 void printMatrix(float ** M, int rowSize, int columnSize);
@@ -70,7 +70,7 @@ void doCPUStencil(float ** M, int rowSize, int columnSize) {
 
 	for (int i = 0; i < rowSize; i++) {
 		for (int j = 0; j < columnSize; j++) {
-			tmp[j] = ALAPH * M[i][j] + BETA * (
+            tmp[j] = ALPHA * M[i][j] + BETA * (
 				getTopElement(M, i, j, rowSize, columnSize) +
 				getRightElement(M, i, j, rowSize, columnSize) +
 				getBottomElement(M, i, j, rowSize, columnSize) +
