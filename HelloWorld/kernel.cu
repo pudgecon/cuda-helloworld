@@ -18,7 +18,7 @@ float getLeftElement(float ** M, int indexOfRow, int indexOfColumn, int rowSize,
 
 int main()
 {
-	int const rowSize = 1024;
+	int const rowSize    = 1024;
 	int const columnSize = 1024;
 
 	float **M = (float **)malloc(sizeof(float *) * rowSize);
